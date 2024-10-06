@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 # Written by: cyberknight777
 # YAKB v2.0
@@ -13,7 +14,7 @@
 # Some Placeholders: [!] [*] [✓] [✗]
 
 # Default defconfig to use for builds.
-export CONFIG=dragonheart_defconfig
+export CONFIG=defconfig
 
 # Default directory where kernel is located in.
 KDIR=$(pwd)
@@ -23,20 +24,20 @@ export KDIR
 export LINKER="ld.lld"
 
 # Device name.
-export DEVICE="OnePlus 7 Series"
+export DEVICE="Realme 9 SPEED EDITION"
 
 # Date of build.
 DATE=$(date +"%Y-%m-%d")
 export DATE
 
 # Device codename.
-export CODENAME="op7"
+export CODENAME="ice"
 
 # Builder name.
-export BUILDER="cyberknight777"
+export BUILDER="DevInfinix"
 
 # Kernel repository URL.
-export REPO_URL="https://github.com/cyberknight777/dragonheart_kernel_oneplus_sm8150"
+export REPO_URL="https://github.com/DevInfinix/android_kernel_oplus_RMX3461/tree/15.0-testing"
 
 # Commit hash of HEAD.
 COMMIT_HASH=$(git rev-parse --short HEAD)
@@ -129,11 +130,11 @@ fi
 
 KBUILD_BUILD_VERSION=$(grep num= version | cut -d= -f2)
 export KBUILD_BUILD_VERSION
-export KBUILD_BUILD_USER="cyberknight777"
-export KBUILD_BUILD_HOST="builder"
+export KBUILD_BUILD_USER="DevInfinix"
+export KBUILD_BUILD_HOST="Garudinix"
 VERSION=$(grep ver= version | cut -d= -f2)
 kver="${KBUILD_BUILD_VERSION}"
-zipn=DragonHeart-op7-"${VERSION}"
+zipn=Kernix-ice-"${VERSION}"
 
 # A function to exit on SIGINT.
 exit_on_signal_SIGINT() {
